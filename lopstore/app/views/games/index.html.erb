@@ -1,0 +1,21 @@
+<h4 class="column">Featured Games</h4>
+<div class="column">
+  <ul class="games-grid no-bullet row">
+    <% @games.each do |game| %>
+      <li class="large-3 medium-4 small-12 column">
+        <div class="game-card padly">
+          <%= link_to game, class: "poster" do %>
+            <%= image_tag game.poster %>
+          <% end %>
+          <div class="game-info ell glassy-bg padmy padlx">
+            <div class="title">
+              <h6><%= game.title %> <span>(<%= game.release_year %>)</span></h6>
+            </div>
+            <p class="left price label game-label radius">$ <%= game.price %></p>
+            <% end %>
+          </div>
+        </div>
+      </li>
+
+  </ul>
+</div>

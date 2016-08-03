@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<div class="large-3 small-12 column">
+  <%=image_tag @game.poster%>
+</div>
+
+<div class="large-9 small-12 column">
+  <h3>
+    <%= @game.title %>
+    (<%= @game.release_year %>)
+    <%end%>
+  </h3>
+  <p class="label game-label radius mb1">$ <%= @game.price %></p>
+ <%end%>
+  <%end%>
+  <p><%= @game.description %></p>
+</div>
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %>
